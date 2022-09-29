@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
+
+:root {
+    --background: #333333;
+    --text-green: #b4d585;
+    --text-white: #ffffff;
+    --text-blue: #82aaff;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Roboto Mono", sans-serif, "arial";
+    color: var(--text-white);
+}
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    /* border: 1px solid red; */
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    color: var(--text-green);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.cursor {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.t-green {
+    color: var(--text-green);
+}
+.t-blue {
+    color: var(--text-blue);
+}
+a {
+    color: var(--text-blue);
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.selectable{
+    padding:5px;
+    border:1px solid var(--text-white);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.selectable:hover{
+    box-shadow: 0 0 0 2px var(--text-green);
+
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

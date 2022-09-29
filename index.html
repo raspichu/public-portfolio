@@ -1,0 +1,229 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="main">
+        <div class="p5 pt-5">
+            <div>
+                <div class="text">
+                    <span class="t-green">your@browser</span>:<span class="t-blue">~</span>$
+                    <span id="typpingSsh"></span><span class="cursor" id="cursor1">|</span>
+                </div>
+                <div class="text d-none" id="block1">
+                    Welcome to <span class="name"></span>'s website!
+                    <br>
+                    <div class="ps-2">
+                        <div>* Documentation: <a href="https://github.com/zenstt">https://github.com/<span
+                                    class="name capitalize"></span></a></div>
+                        <div>* Management: <span class="name capitalize"></span></div>
+                        <div>* Support: <span class="name capitalize"></span></div>
+                        <br>
+                        <div>
+                            System information as of <span id="date"></span>
+                        </div>
+                        <br>
+                        <!-- <div>
+                            <table>
+                                <tr>
+                                    <td> System load: </td>
+                                    <td> 0.2356 </td>
+                                </tr>
+                                <tr>
+                                    <td> Usage of /: </td>
+                                    <td> 66% of 30GB </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="pe-5">Memory usage: </span></td>
+                                    <td> 0.0% of 0.00GB </td>
+                                </tr>
+                                <tr>
+                                    <td> Swap usage: </td>
+                                    <td> 0.0% of 0.00GB </td>
+                                </tr>
+                                <tr>
+                                    <td> Temperature: </td>
+                                    <td> 50.4 C </td>
+                                </tr>
+                                <tr>
+                                    <td> Processes: </td>
+                                    <td> 0 </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br> -->
+                    </div>
+                    <div id="about_meText" class="d-none">
+                        <span class="t-green">about_me@<span class="name"></span></span>:<span class="t-blue">~</span>$
+                        <span id="typpingAboutMe"></span><span class="cursor" id="cursor2">|</span>
+                    </div>
+
+                    <div class="text d-none" id="block2">
+                        <div class="ps-2 row justify-content-start">
+                            <div class="col p-1 m-1">
+                                <span class="selectable" id="aboutMe">'About me.md'</span>
+                            </div>
+                            <div class="col p-1 m-1">
+                                <span class="selectable t-green" id="skills">loadSkills.sh</span>
+                            </div>
+                            <div class="col p-1 m-1">
+                                <span class="selectable" id="projects">projects.js</span>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+
+                    <div id="selectorShow" class="d-none">
+                        <span class="t-green">about_me@<span class="name"></span></span>:<span class="t-blue">~</span>$
+                        <span id="typpingSelector"></span><span class="cursor" id="cursor3">|</span>
+                    </div>
+
+                    <div class="text d-none" id="aboutMeBlock">
+                        <div class="">
+                            # About me <br>
+                            Hi there! <br>
+                            I'm <span class="name capitalize"></span>, a passionate fullStack software developer.<br>
+                            <br>
+                            ## Projects <br>
+                            Working on a lot of projects. Sadly most of them are private. <br>
+                            I'm working to make more publics, but is hard to find the time and the will to do it. <br>
+                            <br>
+                            ## Hobbies <br>
+                            I love making little scripts to make my life easier, webscraping, and making bots. <br>
+                            Always playing around with tensorflow to make overengineered AI for doing casual jobs.<br>
+                            <br>
+                            Technology fanatic, no matter what I need to check and try what new languages and frameworks
+                            are out
+                            there.<br>
+                            VR enthusiast, always messing around with my VR headsets. <br>
+                            Proudly owner of a SteamDeck that is surviving all the testing I'm doing with it<br>
+                            <br>
+                            ## Skills <br>
+                            Usually you'll find me working with NodeJS, Angular and MongoDB. <br>
+                            It's the best combination I can find.<br>
+
+                            <br>
+                            ### Languages<br>
+                            * TypeScript<br>
+                            * JavaScript<br>
+                            * Python<br>
+                            * Bash<br>
+                            * Java<br>
+                            <br>
+                            ### Frameworks and environment<br>
+                            * NodeJS<br>
+                            * Express<br>
+                            * Angular<br>
+                            * AngularJS<br>
+                            * Bootstrap<br>
+                            * jQuery<br>
+                            * Tensorflow<br>
+
+
+
+                        </div>
+                    </div>
+                    <div class="text d-none" id="skillsBlock">
+                        <div class="ps-2">
+                            <div>
+                                Loading skills...
+                            </div>
+                            <br>
+                            <table>
+                                <tr class="mt-1">
+                                    <td>NodeJS</td>
+                                    <td>[<span id="nodejs"></span>]</td>
+                                    <td>(<span id="nodejsPercent"></span>)</td>
+
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>Angular</td>
+                                    <td>[<span id="angular"></span>]</td>
+                                    <td>(<span id="angularPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>MongoDB</td>
+                                    <td>[<span id="mongodb"></span>]</td>
+                                    <td>(<span id="mongodbPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>SQL</td>
+                                    <td>[<span id="SQL"></span>]</td>
+                                    <td>(<span id="SQLPercent"></span>)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ---
+                                    </td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td class="pe-2">Typescript</td>
+                                    <td>[<span id="typescript"></span>]</td>
+                                    <td>(<span id="typescriptPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td class="pe-2">Javascript</td>
+                                    <td>[<span id="javascript"></span>]</td>
+                                    <td>(<span id="javascriptPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>Python</td>
+                                    <td>[<span id="python"></span>]</td>
+                                    <td>(<span id="pythonPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>Java</td>
+                                    <td>[<span id="java"></span>]</td>
+                                    <td>(<span id="javaPercent"></span>)</td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>Bash</td>
+                                    <td>[<span id="bash"></span>]</td>
+                                    <td>(<span id="bashPercent"></span>)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ---
+                                    </td>
+                                </tr>
+                                <tr class="mt-1">
+                                    <td>Tensorflow</td>
+                                    <td>[<span id="tensorflow"></span>]</td>
+                                    <td>(<span id="tensorflowPercent"></span>)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text d-none" id="projectsBlock">
+                        <div class="ps-2">
+                            <div>
+                                /home/about_me/projects.js:65
+                            </div>
+                            <div class="ms-5">
+                                throw new Error("Not implemented");
+                            </div>
+                            <div class="ms-5">
+                                ^
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
